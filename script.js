@@ -5,7 +5,7 @@ let btnLong = document.getElementById('btn-long');
 let btnStart = document.getElementById('btn-start');
 let btnReset = document.getElementById('btn-reset');
 let visorSessions = document.getElementById('sessions');
-let sound = new Audio('./sons/notification.mp3');
+let sound = new Audio('./sons/notification-digital-chime-betacut-1-00-02.mp3');
 let sessionsCount = 0;
 
 let totalSeconds = 1500;
