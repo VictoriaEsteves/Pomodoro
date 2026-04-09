@@ -52,6 +52,7 @@ span {
     color: var(--color3);
     -webkit-text-stroke: 2px var(--borderText);
     font-size: 60px;
+    font-family: var(--fontfamily3);
     font-weight: bold;
     text-align: center;
     margin-top: 5px;
@@ -92,6 +93,8 @@ button {
 
 button:hover {
     color: var(--colorfontHover);
+    transform: scale(1.1);
+    transition: 0.3s;
 }
 
 .video {
