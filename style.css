@@ -8,15 +8,15 @@
 }
 
 :root {
-    --main-color: #090011;
-    --secondary-color: #1e0059;
-    --colorText: #4b0b39;
-    --colortext2: #9e3985;
-    --colorTextHover: #ff32cc;
+    --color1: #090011;
+    --color2: #1e0059;
+    --color3: #4b0b39;
+    --color4: #9e3985;
+    --colorHover: #ff32cc;
     --borderText: #ff32cc;
     --boxColor: rgba(30, 0, 89, 0.322);
     --colorborder: rgba(119, 169, 245, 0.637);
-    
+
     --fontfamily1: 'Audiowide', cursive;
     --fontfamily2: 'Crimson Pro', serif;
     --fontfamily3: 'EB Garamond', serif;
@@ -25,14 +25,14 @@
 
 body {
     font-family: var(--fontfamily2);
-    background-color: var(--main-color);
-    background-image:  linear-gradient(var(--secondary-color) 1px, transparent 1px), linear-gradient(to right, var(--secondary-color) 1px, #090011 1px);
+    background-color: var(--color1);
+    background-image:  linear-gradient(var(--color2) 1px, transparent 1px), linear-gradient(to right, var(--color2) 1px, #090011 1px);
     background-size: 20px 20px;
     
 }
 
 h1 {
-    color: var(--colortext2);
+    color: var(--color4);
     font-family: var(--fontfamily1);
     -webkit-text-stroke-width: 1px; /* Largura da borda */
     -webkit-text-stroke-color: var(--borderText); /* Cor da borda */
@@ -42,14 +42,14 @@ h1 {
 }
 
 h3 {
-    color: var(--colortext2);
+    color: var(--color4);
     font-size: 20px;
     text-align: center;
     margin-top: 10px;
 }
 
 span {
-    color: var(--colorText);
+    color: var(--color3);
     -webkit-text-stroke: 2px var(--borderText);
     font-size: 60px;
     font-weight: bold;
@@ -59,7 +59,7 @@ span {
 }
 
 .container {
-    color: var(--colorText);
+    color: var(--color3);
 
     display: flex;
     flex-direction: column;
@@ -80,7 +80,7 @@ span {
 
 button {
     background-color: transparent;
-    color: var(--colortext2);
+    color: var(--color4);
     border: 1px solid var(--colorborder);
     border-radius: 30px;
     padding: 10px 20px;
@@ -91,7 +91,6 @@ button {
 }
 
 button:hover {
-    background-color: var(--colorTextHover);
     color: var(--colorfontHover);
 }
 
