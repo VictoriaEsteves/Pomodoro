@@ -7,72 +7,21 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <h1>Pomodoro</h1>
+    
     <div class="container">
-        <h1>Pomodoro</h1>
-
-        <div class="modes">
-            <button class="mode active" data-mode="work">Pomodoro</button>
-            <button class="mode" data-mode="short">Short Break</button>
-            <button class="mode" data-mode="long">Long Break</button>
+        <div class="btn-breaks">
+            <button id="btn-pomodoro">Pomodoro</button>
+            <button id="btn-short">Short Break</button>
+            <button id="btn-long">Long Break</button>
         </div>
-
-        <div class="timer" role="timer" aria-live="polite">
-            <div id="mode-label">Work</div>
-            <div class="time-display"><span id="minutes">25</span>:<span id="seconds">00</span></div>
+        <h3>Estudos</h3>
+        <div class="timer">
+            <span id="tempo">25:00</span>
         </div>
-
-        <div class="controls">
-            <button id="start">Start</button>
-            <button id="pause" disabled>Pause</button>
-            <button id="reset">Reset</button>
-            <button id="settingsBtn">Settings</button>
-        </div>
-
-        <div id="settings" class="settings hidden" aria-hidden="true">
-            <label>Work minutes: <input type="number" id="workMinutes" min="1" max="120" value="25"></label>
-            <label>Short break minutes: <input type="number" id="shortMinutes" min="1" max="60" value="5"></label>
-            <label>Long break minutes: <input type="number" id="longMinutes" min="1" max="60" value="15"></label>
-            <label>Long after cycles: <input type="number" id="cyclesBeforeLong" min="1" max="10" value="4"></label>
-            <label><input type="checkbox" id="autoStartNext"> Auto-start next</label>
-
-            <hr>
-            <label>Sound:
-                <select id="soundSelect">
-                    <option value="beep">Beep (sintético)</option>
-                    <option value="chime">Chime</option>
-                    <option value="bell">Bell</option>
-                    <option value="custom">Custom...</option>
-                </select>
-                <button id="previewSound" type="button">Preview</button>
-            </label>
-
-            <label id="customSoundLabel" class="hidden">Upload custom sound:
-                <input type="file" id="soundFile" accept="audio/*">
-                <div id="soundFileName" class="muted"></div>
-            </label>
-
-            <label>Alert volume: <input type="range" id="soundVolume" min="0" max="1" step="0.01" value="0.8"></label>
-
-            <hr>
-            <label><input type="checkbox" id="bgMusicEnabled"> Play background music while studying</label>
-            <label id="bgMusicUploadLabel" class="hidden">Upload background music:
-                <input type="file" id="bgMusicFile" accept="audio/*">
-                <div id="bgMusicFileName" class="muted"></div>
-            </label>
-            <div id="bgMusicControls" class="hidden">
-                <button id="previewBg" type="button">Preview Background</button>
-                <label>BG volume: <input type="range" id="bgMusicVolume" min="0" max="1" step="0.01" value="0.5"></label>
-            </div>
-
-            <div class="settings-actions">
-                <button id="saveSettings">Save</button>
-                <button id="closeSettings">Close</button>
-            </div>
-        </div>
-
-        <div class="stats">Pomodoros: <span id="pomodoroCount">0</span></div>
+        <button id="btn-start">Iniciar</button>
+        <button id="btn-reset">Resetar</button>
     </div>
-
-    <script src="script.js"></script>
+     <iframe width="560" height="315" src="https://www.youtube.com/embed/sF80I-TQiW0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </body>
 </html>
