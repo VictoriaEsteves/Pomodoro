@@ -108,3 +108,11 @@ iframe {
     height: 250px;
     border: none;
 }
+
+#sessions {
+    color: var(--color3);
+    -webkit-text-stroke: 2px var(--borderText);
+    font-size: 40px;
+    font-family: var(--fontfamily3);
+    font-weight: bold;
+}
