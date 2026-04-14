@@ -51,22 +51,30 @@ btnStart.addEventListener('click', function() {
     if (!timerEstaRodando) {
         timerEstaRodando = true;
         btnStart.textContent = 'Pausar';
+        
+        let tempoFinal = Date.now() + (totalSeconds * 1000);
+
         interval = setInterval(function() {
-            if (totalSeconds > 0) {
-                totalSeconds--;
-                secondsToTime(totalSeconds);
+            let segundosQueFaltam = Math.ceil((tempoFinal - Date.now()) / 1000);
+
+            if (segundosQueFaltam > 0) {
+                totalSeconds = segundosQueFaltam; 
+                secondsToTime(totalSeconds);      
             } else {
                 clearInterval(interval);
                 timerEstaRodando = false;
                 btnStart.textContent = 'Iniciar';
+                totalSeconds = 0;
+                secondsToTime(0);
+                
                 sound.play();
-                if (timerType === 1500) { // Se for um ciclo de pomodoro completo
+                if (timerType === 1500) { 
                     sessionsCount++;
                     visorSessions.textContent = sessionsCount;
                 }
             }
-        }, 1000);
-    }else {
+        }, 100); 
+    } else {
         timerEstaRodando = false;
         btnStart.textContent = 'Iniciar';
         clearInterval(interval);
